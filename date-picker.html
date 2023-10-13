@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Date Range Picker&lt;/title&gt;</p>
+<p class="p1">&lt;link rel="stylesheet" href="https://mui.com/x/data-grid/latest/dist/grid-data-grid.min.css" /&gt;</p>
+<p class="p1">&lt;script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;script src="https://unpkg.com/@mui/x-data-grid@latest/dist/grid-data-grid.min.js" crossorigin&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;script src="https://unpkg.com/@emotion/react@latest/dist/emotion-react.umd.min.js" crossorigin&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;script src="https://unpkg.com/@emotion/styled@latest/dist/emotion-styled.umd.min.js" crossorigin&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;div id="date-picker-container"&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;script type="text/javascript"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const { DateRangePicker } = window['@mui/x-data-grid'];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const { styled, ThemeProvider, createTheme } = window['@mui/system'];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const { Box } = window['@mui/material'];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function DateRangePickerDemo() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const [value, setValue] = React.useState([null, null]);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;ThemeProvider theme={createTheme()}&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;Box&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;DateRangePicker</p>
+<p class="p1"><span class="Apple-converted-space">            </span>startText="Start"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>endText="End"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>value={value}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>onChange={(newValue) =&gt; setValue(newValue)}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>renderInput={(startProps, endProps) =&gt; (</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input {...startProps} placeholder="Start date" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;Box sx={{ mx: 2 }}&gt; to &lt;/Box&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input {...endProps} placeholder="End date" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>)}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/Box&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ThemeProvider&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>ReactDOM.render(&lt;DateRangePickerDemo /&gt;, document.getElementById('date-picker-container'));</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
